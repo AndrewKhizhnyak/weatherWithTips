@@ -15,19 +15,19 @@ const Body = (props: any) => {
         onKeyDown={onGetWeatherOnEnter}
         value={cityName}
         defaultValue="Moscow"
-        style={{ marginTop: 200 }}
+        style={{ marginTop: 50 }}
         error={!!errorMessage}
         helperText={errorMessage}
       />
       <Button
         variant="contained"
-        style={{ marginTop: 20 }}
+        style={{ marginTop: 20, paddingLeft: 44, paddingRight: 44 }}
         onClick={onGetWeather}
       >
-        Get Weather
+        Get weather
       </Button>
       {weather.name && (
-        <Paper style={{ marginTop: 20, padding: 10 }}>
+        <Paper style={{ marginTop: 20, padding: 20.5 }}>
           <b>Weather in {weather.name}:</b> <br />
           {weather.main}: {weather.description} <br />
           Temperature: {weather.temperature.toFixed(2)}°С <br />
